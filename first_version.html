@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <title>磐毅建設開發股份有限公司 PRIME ERA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="磐毅建設開發股份有限公司 PRIME ERA 官方網站" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-main: #050608;
+      --bg-panel: #121318;
+      --accent: #d9a88b;
+      --accent-soft: #b88567;
+      --text-main: #f4ece7;
+      --text-muted: #9d9fa5;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Noto Sans TC", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top left, #22252b 0, var(--bg-main) 45%, #000 100%);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .page {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* 上方 Logo 橫條 */
+    .top-bar {
+      background: rgba(0, 0, 0, 0.6);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(10px);
+    }
+
+    .top-bar-inner {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 20px;
+    }
+
+    .top-logo-wrap {
+      width: 180px;
+      max-width: 40vw;
+    }
+
+    .top-logo-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+      /* 若 logo 本身已是淺色或玫瑰金，可移除這行 */
+      filter: invert(85%) sepia(18%) saturate(700%) hue-rotate(330deg) brightness(1.05) contrast(1.1);
+    }
+
+    /* 下方主內容：佔滿排版 */
+    .content {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 24px 40px;
+    }
+
+    .content-inner {
+      max-width: 1320px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr);
+    }
+
+    .content-block {
+      background: linear-gradient(135deg, var(--bg-panel) 0%, #191a21 60%, var(--bg-panel) 100%);
+      border-radius: 26px;
+      padding: 48px 52px;
+      box-shadow:
+        0 30px 70px rgba(0, 0, 0, 0.7),
+        0 0 0 1px rgba(255, 255, 255, 0.03);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* 背景淡 Logo */
+    .content-block::after {
+      content: "";
+      position: absolute;
+      right: -120px;
+      bottom: -140px;
+      width: 460px;
+      height: 460px;
+      background-image: url("prime-era-logo.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0.03;
+      filter: brightness(0.7);
+      pointer-events: none;
+    }
+
+    .text-wrap {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+    }
+
+    .company-zh {
+      font-size: 24px;               /* 公司名稱放大 */
+      letter-spacing: 0.26em;
+      color: var(--accent-soft);
+    }
+
+    .divider {
+      width: 80px;
+      height: 1px;
+      background: linear-gradient(90deg, var(--accent) 0%, transparent 100%);
+      margin-top: 18px;
+    }
+
+    .headline {
+      margin-top: 30px;
+      font-size: 22px;
+      line-height: 1.9;
+      color: var(--text-main);
+    }
+
+    .contact-section {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .contact-heading {
+      font-size: 28px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .email-main {
+      font-size: 22px;
+      line-height: 1.7;
+      color: var(--text-main);
+      text-decoration: none;
+      word-break: break-all;
+      padding-bottom: 6px;
+      border-bottom: 1px solid rgba(217, 168, 139, 0.7);
+      display: inline-block;
+      transition: color 0.16s ease, border-color 0.16s ease;
+    }
+
+    .email-main:hover {
+      color: var(--accent);
+      border-color: rgba(217, 168, 139, 1);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-muted);
+      padding: 10px 18px 20px;
+    }
+
+    @media (max-width: 960px) {
+      .content-block {
+        padding: 40px 32px;
+      }
+      .headline {
+        font-size: 20px;
+      }
+      .contact-heading {
+        font-size: 24px;
+      }
+      .email-main {
+        font-size: 20px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .top-bar-inner {
+        padding: 14px 16px;
+      }
+      .top-logo-wrap {
+        width: 150px;
+      }
+      .content {
+        padding: 24px 12px 32px;
+      }
+      .content-block {
+        border-radius: 22px;
+        padding: 32px 22px;
+      }
+      .company-zh {
+        font-size: 20px;
+        letter-spacing: 0.22em;
+      }
+      .headline {
+        font-size: 18px;
+      }
+      .contact-heading {
+        font-size: 22px;
+        letter-spacing: 0.22em;
+      }
+      .email-main {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- 上方 Logo 橫幅 -->
+    <header class="top-bar">
+      <div class="top-bar-inner">
+        <div class="top-logo-wrap">
+          <!-- 去背 logo 檔案：若檔名不同請改這裡 -->
+          <img src="images/prime-era-logo.png" alt="PRIME ERA Logo" />
+        </div>
+      </div>
+    </header>
+
+    <!-- 下方主內容，資訊佔滿排版 -->
+    <main class="content">
+      <section class="content-inner" aria-label="磐毅建設開發股份有限公司 聯絡資訊">
+        <div class="content-block">
+          <div class="text-wrap">
+            <div class="company-zh">磐毅建設開發股份有限公司</div>
+            <div class="divider"></div>
+
+            <p class="headline">
+              如有土地開發、合作洽詢或其他問題，歡迎來信與我們聯絡。
+            </p>
+
+            <div class="contact-section">
+              <div class="contact-heading">聯絡我們</div>
+              <a
+                class="email-main"
+                href="mailto:contactus@prime-era.com.tw"
+                rel="noopener"
+              >
+                contactus@prime-era.com.tw
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    Copyright <span id="year"></span> © 磐毅建設 All Rights Reserved.
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
