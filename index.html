@@ -5,18 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>磐毅建設開發股份有限公司 PRIME ERA</title>
   <meta name="description" content="磐毅建設開發股份有限公司。提供土地開發、合作洽詢與企業資訊。">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="shortcut icon" href="images/favicon.png">
   <link rel="stylesheet" href="styles/site.css">
 </head>
 <body>
   <header class="site-header">
     <div class="site-header-inner">
-      <div class="brand">
-        <img src="images/logo.png" alt="PRIME ERA Logo">
+      <a class="brand" href="index.html" aria-label="回到首頁">
+        <img src="images/logo.png" alt="PRIME ERA Logo" class="brand-logo">
         <div class="brand-text">
-          <strong>磐毅建設開發股份有限公司</strong><br>
-          PRIME ERA
+          <strong>磐毅建設開發股份有限公司</strong>
+          <span>PRIME ERA</span>
         </div>
-      </div>
+      </a>
 
       <nav class="nav">
         <a href="index.html">首頁</a>
@@ -40,24 +42,36 @@
           <a class="btn" href="mailto:contactus@prime-era.com.tw">聯絡我們</a>
           <a class="btn btn-secondary" href="news/index.html">查看最新消息</a>
         </div>
+
+        <div class="contact-panel" aria-label="聯絡資訊">
+          <div class="contact-label">Email</div>
+          <a class="contact-email" href="mailto:contactus@prime-era.com.tw">contactus@prime-era.com.tw</a>
+        </div>
       </div>
     </section>
 
     <section class="section">
       <h2 class="section-title">最新消息</h2>
 
-      <div class="card-grid">
-        <article class="card card-half">
-          <img src="images/csr-2026-cover.jpg" alt="磐毅建設參與公益行動">
-          <div class="card-body">
-            <div class="card-date">2026 / 03 / 17</div>
+      <div class="news-list news-list-compact">
+        <article class="news-card">
+          <a class="news-card-link" href="news/csr-2026-01.html" aria-label="閱讀磐毅建設參與百大企業公益行動全文"></a>
+          <div class="news-card-media">
+            <img src="images/csr-2026-cover.jpg" alt="磐毅建設參與公益行動">
+          </div>
+          <div class="news-card-body">
+            <div class="card-date">2026 / 03 / 12</div>
             <h3 class="card-title">磐毅建設參與百大企業公益行動</h3>
             <p class="card-desc">
               磐毅建設參與公益平台行動，投入災後重建、弱勢關懷與動物保護等社會參與。
             </p>
-            <a href="news/csr-2026-01.html">閱讀更多 →</a>
+            <span class="card-cta">閱讀全文</span>
           </div>
         </article>
+      </div>
+
+      <div class="section-actions">
+        <a class="btn btn-secondary" href="news/index.html">查看全部消息</a>
       </div>
     </section>
   </main>
