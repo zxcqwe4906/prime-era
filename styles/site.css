@@ -543,7 +543,21 @@ a:hover {
 .media-list {
   margin-top: 18px;
   display: grid;
+  gap: 22px;
+}
+
+.media-group {
+  display: grid;
   gap: 12px;
+}
+
+.media-group-title {
+  color: var(--accent-soft);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin: 2px 0 2px;
 }
 
 .media-item {
@@ -551,6 +565,22 @@ a:hover {
   border-radius: 16px;
   padding: 18px 18px 16px;
   background: rgba(255,255,255,0.03);
+  transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.media-item:hover {
+  transform: translateY(-1px);
+  border-color: rgba(228, 195, 180, 0.34);
+  background: linear-gradient(180deg, rgba(208, 167, 147, 0.09), rgba(255,255,255,0.04));
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.18);
+}
+
+.media-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
 }
 
 .media-source {
@@ -559,7 +589,18 @@ a:hover {
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  margin-bottom: 8px;
+}
+
+.media-tag {
+  flex-shrink: 0;
+  padding: 4px 10px;
+  border: 1px solid rgba(228, 195, 180, 0.2);
+  border-radius: 999px;
+  color: var(--accent-soft);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  background: rgba(255, 255, 255, 0.03);
 }
 
 .media-link {
@@ -602,6 +643,11 @@ a:hover {
     flex-direction: column;
     align-items: flex-start;
     padding: 16px 20px;
+  }
+
+  .media-meta {
+    flex-wrap: wrap;
+    align-items: flex-start;
   }
 
   .brand {
