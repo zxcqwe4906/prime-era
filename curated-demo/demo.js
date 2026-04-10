@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   var cards = Array.from(list.querySelectorAll(".selection-card"));
+  var categoryButtons = Array.from(document.querySelectorAll('[data-filter-group="category"]'));
   var regionButtons = Array.from(document.querySelectorAll('[data-filter-group="region"]'));
   var featureButtons = Array.from(document.querySelectorAll('[data-filter-group="feature"]'));
   var sortButtons = Array.from(document.querySelectorAll("[data-sort]"));
@@ -13,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var emptyNode = document.getElementById("selection-empty");
 
   var state = {
+    category: "all",
     region: "all",
     features: new Set(),
     sort: "featured"
@@ -29,6 +31,11 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function matchesWithState(card, candidateState) {
+    var categoryMatches = candidateState.category === "all" || card.dataset.category === candidateState.category;
+    if (!categoryMatches) {
+      return false;
+    }
+
     var regionMatches = candidateState.region === "all" || card.dataset.region === candidateState.region;
     if (!regionMatches) {
       return false;
@@ -56,12 +63,18 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function updateSummary(visibleCards) {
+    var titleByCategory = {
+      all: "符合條件的精選物件",
+      sale: "符合條件的買賣物件",
+      rent: "符合條件的租屋物件"
+    };
+
     if (countNode) {
       countNode.innerHTML = "<strong>共 " + visibleCards.length + " 筆</strong>";
     }
 
     if (titleNode) {
-      titleNode.textContent = visibleCards.length > 0 ? "符合條件的精選物件" : "目前沒有符合條件的物件";
+      titleNode.textContent = visibleCards.length > 0 ? titleByCategory[state.category] : "目前沒有符合條件的物件";
     }
 
     if (emptyNode) {
@@ -81,6 +94,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
     updateSummary(visibleCards);
   }
+
+  categoryButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      var value = button.dataset.filterValue;
+      if (value === "all" || state.category === value) {
+        state.category = "all";
+      } else {
+        state.category = value;
+      }
+      var activeButton = categoryButtons.find(function (categoryButton) {
+        return categoryButton.dataset.filterValue === state.category;
+      }) || categoryButtons[0];
+      setPressed(categoryButtons, activeButton, false);
+      render();
+    });
+  });
 
   regionButtons.forEach(function (button) {
     button.addEventListener("click", function () {
@@ -123,6 +152,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  setPressed(categoryButtons, categoryButtons[0], false);
   setPressed(regionButtons, regionButtons[0], false);
   setPressed(featureButtons, null, true);
   render();

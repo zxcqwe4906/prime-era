@@ -43,30 +43,53 @@
           協助快速掌握物件定位、空間亮點與預約洽詢流程。
         </p>
         <div class="selection-hero-inline">
-          <div class="selection-hero-inline-item">
-            <span class="selection-hero-inline-label">精選物件</span>
-            <strong class="selection-hero-inline-value">3 戶</strong>
+        <div class="selection-hero-inline-item">
+          <span class="selection-hero-inline-label">精選物件</span>
+            <strong class="selection-hero-inline-value">6 戶</strong>
           </div>
           <div class="selection-hero-inline-item">
             <span class="selection-hero-inline-label">涵蓋區域</span>
-            <strong class="selection-hero-inline-value">天母・永和・竹北</strong>
+            <strong class="selection-hero-inline-value">天母・大安・板橋・永和・竹北・林口</strong>
           </div>
         </div>
       </div>
     </section>
 
     <section class="selection-panel selection-toolbar" aria-label="物件篩選條件">
-      <div class="selection-filter-row">
-        <div class="selection-filter-group">
-          <button class="selection-filter-chip active" type="button" data-filter-group="region" data-filter-value="all" aria-pressed="true"><strong>全部物件</strong></button>
-          <button class="selection-filter-chip" type="button" data-filter-group="region" data-filter-value="taipei" aria-pressed="false">台北市</button>
-          <button class="selection-filter-chip" type="button" data-filter-group="region" data-filter-value="new-taipei" aria-pressed="false">新北市</button>
-          <button class="selection-filter-chip" type="button" data-filter-group="region" data-filter-value="hsinchu" aria-pressed="false">新竹縣市</button>
+      <div class="selection-primary-filter">
+        <div class="selection-primary-options" role="group" aria-label="物件主分類">
+          <button class="selection-primary-chip active" type="button" data-filter-group="category" data-filter-value="all" aria-pressed="true">
+            <span class="selection-primary-label">全部物件</span>
+            <span class="selection-primary-meta">完整瀏覽磐毅嚴選</span>
+          </button>
+          <button class="selection-primary-chip" type="button" data-filter-group="category" data-filter-value="sale" aria-pressed="false">
+            <span class="selection-primary-label">買賣</span>
+            <span class="selection-primary-meta">精選出售與置產型物件</span>
+          </button>
+          <button class="selection-primary-chip" type="button" data-filter-group="category" data-filter-value="rent" aria-pressed="false">
+            <span class="selection-primary-label">租屋</span>
+            <span class="selection-primary-meta">出租中物件</span>
+          </button>
         </div>
-        <div class="selection-filter-group">
-          <button class="selection-filter-chip" type="button" data-filter-group="feature" data-filter-value="price-2000-4000" aria-pressed="false">總價 2,000 - 4,000 萬</button>
-          <button class="selection-filter-chip" type="button" data-filter-group="feature" data-filter-value="rental" aria-pressed="false">收租型產品</button>
-          <button class="selection-filter-chip" type="button" data-filter-group="feature" data-filter-value="transit" aria-pressed="false">近捷運 / 高鐵</button>
+      </div>
+
+      <div class="selection-filter-row">
+        <div class="selection-filter-block">
+          <div class="selection-filter-block-label">縣市</div>
+          <div class="selection-filter-group">
+            <button class="selection-filter-chip active" type="button" data-filter-group="region" data-filter-value="all" aria-pressed="true"><strong>全部區域</strong></button>
+            <button class="selection-filter-chip" type="button" data-filter-group="region" data-filter-value="taipei" aria-pressed="false">台北市</button>
+            <button class="selection-filter-chip" type="button" data-filter-group="region" data-filter-value="new-taipei" aria-pressed="false">新北市</button>
+            <button class="selection-filter-chip" type="button" data-filter-group="region" data-filter-value="hsinchu" aria-pressed="false">新竹縣市</button>
+          </div>
+        </div>
+        <div class="selection-filter-block">
+          <div class="selection-filter-block-label">產品條件</div>
+          <div class="selection-filter-group">
+            <button class="selection-filter-chip" type="button" data-filter-group="feature" data-filter-value="price-2000-4000" aria-pressed="false">總價 2,000 - 4,000 萬</button>
+            <button class="selection-filter-chip" type="button" data-filter-group="feature" data-filter-value="rental" aria-pressed="false">收租型產品</button>
+            <button class="selection-filter-chip" type="button" data-filter-group="feature" data-filter-value="transit" aria-pressed="false">近捷運 / 高鐵</button>
+          </div>
         </div>
       </div>
 
@@ -76,10 +99,10 @@
           <div class="selection-results-copy">可依地區、產品類型與價格條件快速篩選合適物件。</div>
         </div>
         <div class="selection-result-group">
-          <div class="selection-stat-chip" id="selection-results-count"><strong>共 3 筆</strong></div>
+          <div class="selection-stat-chip" id="selection-results-count"><strong>共 6 筆</strong></div>
           <button class="selection-sort-chip active" type="button" data-sort="featured" aria-pressed="true">精選排序</button>
           <button class="selection-sort-chip" type="button" data-sort="popular" aria-pressed="false">人氣精選</button>
-          <button class="selection-sort-chip" type="button" data-sort="price-asc" aria-pressed="false">總價由低到高</button>
+          <button class="selection-sort-chip" type="button" data-sort="price-asc" aria-pressed="false">價格由低到高</button>
         </div>
       </div>
     </section>
@@ -96,11 +119,12 @@
         <div class="selection-empty" id="selection-empty">目前沒有符合條件的物件，請調整篩選條件後再試一次。</div>
 
         <div class="selection-list" id="selection-list">
-          <article class="selection-card" data-region="taipei" data-features="rental" data-transit="false" data-price="5680" data-feature-rank="1" data-popular-rank="2">
+          <article class="selection-card" data-category="sale" data-region="taipei" data-features="rental" data-transit="false" data-price="5680" data-feature-rank="1" data-popular-rank="2">
             <a class="selection-card-link" href="property-tianmu.html" aria-label="查看天母靜奢寓所詳情"></a>
             <div class="selection-card-media">
               <div class="selection-card-badges">
                 <span class="selection-badge featured">磐毅嚴選</span>
+                <span class="selection-badge category">買賣</span>
               </div>
               <img src="../images/demo-properties/tianmu-01.svg" alt="天母靜奢寓所客廳情境圖">
             </div>
@@ -159,11 +183,140 @@
             </div>
           </article>
 
-          <article class="selection-card" data-region="new-taipei" data-features="rental transit price-2000-4000" data-transit="true" data-price="2180" data-feature-rank="2" data-popular-rank="1">
+          <article class="selection-card" data-category="sale" data-region="taipei" data-features="transit" data-transit="true" data-price="4280" data-feature-rank="2" data-popular-rank="4">
+            <a class="selection-card-link" href="property-daan.html" aria-label="查看大安品序雅邸詳情"></a>
+            <div class="selection-card-media">
+              <div class="selection-card-badges">
+                <span class="selection-badge featured">磐毅嚴選</span>
+                <span class="selection-badge category">買賣</span>
+              </div>
+              <img src="../images/demo-properties/tianmu-02.svg" alt="大安品序雅邸餐廚與客廳情境圖">
+            </div>
+            <div class="selection-card-body">
+              <div class="selection-card-top">
+                <div>
+                  <div class="selection-card-location">台北市大安區・信義安和生活圈</div>
+                  <h3>大安品序雅邸</h3>
+                </div>
+                <div class="selection-tag">都心換屋</div>
+              </div>
+
+              <div class="selection-price">
+                <div class="selection-price-amount">NT$ 4,280 萬</div>
+                <div class="selection-price-note">近捷運站，室內坪效完整</div>
+              </div>
+
+              <div class="selection-card-brief">
+                <span>都心精華地段</span>
+                <span>捷運步行可達</span>
+                <span>換屋型產品</span>
+              </div>
+
+              <div class="selection-meta">
+                <div class="selection-meta-item">
+                  <div class="selection-meta-label">建坪</div>
+                  <div class="selection-meta-value">36.8 坪</div>
+                </div>
+                <div class="selection-meta-item">
+                  <div class="selection-meta-label">格局</div>
+                  <div class="selection-meta-value">2 房 2 廳</div>
+                </div>
+                <div class="selection-meta-item">
+                  <div class="selection-meta-label">樓層</div>
+                  <div class="selection-meta-value">6 / 12 樓</div>
+                </div>
+              </div>
+
+              <div class="selection-highlights">
+                <span class="selection-pill">大安核心</span>
+                <span class="selection-pill">精品尺度</span>
+                <span class="selection-pill">生活機能成熟</span>
+              </div>
+
+              <p class="selection-card-desc">
+                聚焦大安區稀缺中坪數產品，兼顧自住舒適度與都心保值性，適合換屋與資產配置需求。
+              </p>
+
+              <div class="selection-card-actions">
+                <span class="selection-card-cta">查看完整物件</span>
+                <div class="selection-card-action-group">
+                  <a class="selection-action-btn secondary" href="property-daan.html">查看詳情</a>
+                  <a class="selection-action-btn primary" href="mailto:contactus@prime-era.com.tw?subject=%E5%A4%A7%E5%AE%89%E5%93%81%E5%BA%8F%E9%9B%85%E9%82%B8%20%E9%A0%90%E7%B4%84%E5%B8%B6%E7%9C%8B">預約專人帶看</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="selection-card" data-category="sale" data-region="new-taipei" data-features="price-2000-4000 transit" data-transit="true" data-price="3180" data-feature-rank="3" data-popular-rank="5">
+            <a class="selection-card-link" href="property-banqiao.html" aria-label="查看板橋新府序景詳情"></a>
+            <div class="selection-card-media">
+              <div class="selection-card-badges">
+                <span class="selection-badge featured">磐毅嚴選</span>
+                <span class="selection-badge category">買賣</span>
+              </div>
+              <img src="../images/demo-properties/yonghe-02.svg" alt="板橋新府序景臥室與窗景情境圖">
+            </div>
+            <div class="selection-card-body">
+              <div class="selection-card-top">
+                <div>
+                  <div class="selection-card-location">新北市板橋區・府中生活圈</div>
+                  <h3>板橋新府序景</h3>
+                </div>
+                <div class="selection-tag">首換宅</div>
+              </div>
+
+              <div class="selection-price">
+                <div class="selection-price-amount">NT$ 3,180 萬</div>
+                <div class="selection-price-note">近府中站，總價帶清晰</div>
+              </div>
+
+              <div class="selection-card-brief">
+                <span>捷運生活圈</span>
+                <span>總價帶明確</span>
+                <span>新北核心區</span>
+              </div>
+
+              <div class="selection-meta">
+                <div class="selection-meta-item">
+                  <div class="selection-meta-label">建坪</div>
+                  <div class="selection-meta-value">31.5 坪</div>
+                </div>
+                <div class="selection-meta-item">
+                  <div class="selection-meta-label">格局</div>
+                  <div class="selection-meta-value">2 房 2 廳</div>
+                </div>
+                <div class="selection-meta-item">
+                  <div class="selection-meta-label">樓層</div>
+                  <div class="selection-meta-value">9 / 15 樓</div>
+                </div>
+              </div>
+
+              <div class="selection-highlights">
+                <span class="selection-pill">府中站步行可達</span>
+                <span class="selection-pill">動線方正</span>
+                <span class="selection-pill">首換族友善</span>
+              </div>
+
+              <p class="selection-card-desc">
+                以新北核心生活圈、易理解的總價帶與便利通勤條件為主，適合首購升級與自住型買方。
+              </p>
+
+              <div class="selection-card-actions">
+                <span class="selection-card-cta">查看完整物件</span>
+                <div class="selection-card-action-group">
+                  <a class="selection-action-btn secondary" href="property-banqiao.html">查看詳情</a>
+                  <a class="selection-action-btn primary" href="mailto:contactus@prime-era.com.tw?subject=%E6%9D%BF%E6%A9%8B%E6%96%B0%E5%BA%9C%E5%BA%8F%E6%99%AF%20%E9%A0%90%E7%B4%84%E5%B8%B6%E7%9C%8B">預約專人帶看</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="selection-card" data-category="rent" data-region="new-taipei" data-features="transit" data-transit="true" data-price="56000" data-feature-rank="2" data-popular-rank="1">
             <a class="selection-card-link" href="property-yonghe.html" aria-label="查看永和捷境收租套匯詳情"></a>
             <div class="selection-card-media">
               <div class="selection-card-badges">
                 <span class="selection-badge featured">磐毅嚴選</span>
+                <span class="selection-badge category">租屋</span>
               </div>
               <img src="../images/demo-properties/yonghe-01.svg" alt="永和捷境收租套匯客餐廳情境圖">
             </div>
@@ -173,17 +326,17 @@
                   <div class="selection-card-location">新北市永和區・頂溪站步行約 5 分鐘</div>
                   <h3>永和捷境收租套匯</h3>
                 </div>
-                <div class="selection-tag">捷運置產</div>
+                <div class="selection-tag">包租代管</div>
               </div>
 
               <div class="selection-price">
-                <div class="selection-price-amount">NT$ 2,180 萬</div>
-                <div class="selection-price-note">低總價，含裝修與家電配置</div>
+                <div class="selection-price-amount">NT$ 56,000 / 月</div>
+                <div class="selection-price-note">含裝修與家電配置，可立即出租</div>
               </div>
 
               <div class="selection-card-brief">
                 <span>捷運通勤優勢</span>
-                <span>小宅精選產品</span>
+                <span>出租中物件</span>
                 <span>裝修完善</span>
               </div>
 
@@ -200,6 +353,10 @@
                   <div class="selection-meta-label">樓層</div>
                   <div class="selection-meta-value">11 / 13 樓</div>
                 </div>
+                <div class="selection-meta-item">
+                  <div class="selection-meta-label">租期</div>
+                  <div class="selection-meta-value">一年起租</div>
+                </div>
               </div>
 
               <div class="selection-highlights">
@@ -209,24 +366,25 @@
               </div>
 
               <p class="selection-card-desc">
-                以頂溪站生活圈與低總價門檻為訴求，適合用來承接首購兼置產型買方與穩定收租需求。
+                以頂溪站生活圈與即刻入住條件為核心，適合穩定都會租客快速入住。
               </p>
 
               <div class="selection-card-actions">
                 <span class="selection-card-cta">查看完整物件</span>
                 <div class="selection-card-action-group">
                   <a class="selection-action-btn secondary" href="property-yonghe.html">查看詳情</a>
-                  <a class="selection-action-btn primary" href="mailto:contactus@prime-era.com.tw?subject=%E6%B0%B8%E5%92%8C%E6%8D%B7%E5%A2%83%E6%94%B6%E7%A7%9F%E5%A5%97%E5%8C%AF%20%E9%A0%90%E7%B4%84%E5%B8%B6%E7%9C%8B">預約專人帶看</a>
+                  <a class="selection-action-btn primary" href="mailto:contactus@prime-era.com.tw?subject=%E6%B0%B8%E5%92%8C%E6%8D%B7%E5%A2%83%E6%94%B6%E7%A7%9F%E5%A5%97%E5%8C%AF%20%E9%A0%90%E7%B4%84%E7%9C%8B%E5%B1%8B">預約專人看屋</a>
                 </div>
               </div>
             </div>
           </article>
 
-          <article class="selection-card" data-region="hsinchu" data-features="rental transit price-2000-4000" data-transit="true" data-price="3980" data-feature-rank="3" data-popular-rank="3">
+          <article class="selection-card" data-category="rent" data-region="hsinchu" data-features="transit" data-transit="true" data-price="93000" data-feature-rank="3" data-popular-rank="3">
             <a class="selection-card-link" href="property-zhubei.html" aria-label="查看竹北高鐵企業宅詳情"></a>
             <div class="selection-card-media">
               <div class="selection-card-badges">
                 <span class="selection-badge featured">磐毅嚴選</span>
+                <span class="selection-badge category">租屋</span>
               </div>
               <img src="../images/demo-properties/zhubei-01.svg" alt="竹北高鐵企業宅公設與客廳情境圖">
             </div>
@@ -236,18 +394,18 @@
                   <div class="selection-card-location">新竹縣竹北市・高鐵特區</div>
                   <h3>竹北高鐵企業宅</h3>
                 </div>
-                <div class="selection-tag">長線增值</div>
+                <div class="selection-tag">企業租賃</div>
               </div>
 
               <div class="selection-price">
-                <div class="selection-price-amount">NT$ 3,980 萬</div>
-                <div class="selection-price-note">含雙車位與公設機能</div>
+                <div class="selection-price-amount">NT$ 93,000 / 月</div>
+                <div class="selection-price-note">含雙車位與公設機能，適合企業客戶</div>
               </div>
 
               <div class="selection-card-brief">
                 <span>高鐵核心地段</span>
                 <span>科技業客群</span>
-                <span>資產增值布局</span>
+                <span>出租中物件</span>
               </div>
 
               <div class="selection-meta">
@@ -263,6 +421,10 @@
                   <div class="selection-meta-label">樓層</div>
                   <div class="selection-meta-value">15 / 22 樓</div>
                 </div>
+                <div class="selection-meta-item">
+                  <div class="selection-meta-label">租期</div>
+                  <div class="selection-meta-value">可談短中期</div>
+                </div>
               </div>
 
               <div class="selection-highlights">
@@ -272,14 +434,82 @@
               </div>
 
               <p class="selection-card-desc">
-                聚焦高鐵特區與科技聚落租賃需求，適合作為企業主管宅或中長線持有型配置產品。
+                聚焦高鐵特區與科技聚落租賃需求，適合作為企業主管宅的高質感租屋產品。
               </p>
 
               <div class="selection-card-actions">
                 <span class="selection-card-cta">查看完整物件</span>
                 <div class="selection-card-action-group">
                   <a class="selection-action-btn secondary" href="property-zhubei.html">查看詳情</a>
-                  <a class="selection-action-btn primary" href="mailto:contactus@prime-era.com.tw?subject=%E7%AB%B9%E5%8C%97%E9%AB%98%E9%90%B5%E4%BC%81%E6%A5%AD%E5%AE%85%20%E9%A0%90%E7%B4%84%E5%B8%B6%E7%9C%8B">預約專人帶看</a>
+                  <a class="selection-action-btn primary" href="mailto:contactus@prime-era.com.tw?subject=%E7%AB%B9%E5%8C%97%E9%AB%98%E9%90%B5%E4%BC%81%E6%A5%AD%E5%AE%85%20%E9%A0%90%E7%B4%84%E7%9C%8B%E5%B1%8B">預約專人看屋</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="selection-card" data-category="rent" data-region="new-taipei" data-features="transit" data-transit="true" data-price="48000" data-feature-rank="4" data-popular-rank="6">
+            <a class="selection-card-link" href="property-linkou.html" aria-label="查看林口昕禾輕寓詳情"></a>
+            <div class="selection-card-media">
+              <div class="selection-card-badges">
+                <span class="selection-badge featured">磐毅嚴選</span>
+                <span class="selection-badge category">租屋</span>
+              </div>
+              <img src="../images/demo-properties/zhubei-02.svg" alt="林口昕禾輕寓餐廚與起居情境圖">
+            </div>
+            <div class="selection-card-body">
+              <div class="selection-card-top">
+                <div>
+                  <div class="selection-card-location">新北市林口區・三井商圈</div>
+                  <h3>林口昕禾輕寓</h3>
+                </div>
+                <div class="selection-tag">都會租住</div>
+              </div>
+
+              <div class="selection-price">
+                <div class="selection-price-amount">NT$ 48,000 / 月</div>
+                <div class="selection-price-note">含基礎家電，近商場與機捷</div>
+              </div>
+
+              <div class="selection-card-brief">
+                <span>機捷生活圈</span>
+                <span>出租中物件</span>
+                <span>新市鎮機能</span>
+              </div>
+
+              <div class="selection-meta">
+                <div class="selection-meta-item">
+                  <div class="selection-meta-label">建坪</div>
+                  <div class="selection-meta-value">24.6 坪</div>
+                </div>
+                <div class="selection-meta-item">
+                  <div class="selection-meta-label">格局</div>
+                  <div class="selection-meta-value">2 房 1 廳</div>
+                </div>
+                <div class="selection-meta-item">
+                  <div class="selection-meta-label">樓層</div>
+                  <div class="selection-meta-value">12 / 18 樓</div>
+                </div>
+                <div class="selection-meta-item">
+                  <div class="selection-meta-label">租期</div>
+                  <div class="selection-meta-value">一年起租</div>
+                </div>
+              </div>
+
+              <div class="selection-highlights">
+                <span class="selection-pill">機捷通勤便利</span>
+                <span class="selection-pill">商場生活圈</span>
+                <span class="selection-pill">新屋齡社區</span>
+              </div>
+
+              <p class="selection-card-desc">
+                以林口新市鎮的通勤便利與完整商場機能為主，適合年輕家庭與都會通勤租客。
+              </p>
+
+              <div class="selection-card-actions">
+                <span class="selection-card-cta">查看完整物件</span>
+                <div class="selection-card-action-group">
+                  <a class="selection-action-btn secondary" href="property-linkou.html">查看詳情</a>
+                  <a class="selection-action-btn primary" href="mailto:contactus@prime-era.com.tw?subject=%E6%9E%97%E5%8F%A3%E6%98%95%E7%A6%BE%E8%BC%95%E5%AF%93%20%E9%A0%90%E7%B4%84%E7%9C%8B%E5%B1%8B">預約專人看屋</a>
                 </div>
               </div>
             </div>
