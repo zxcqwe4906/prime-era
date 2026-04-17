@@ -93,7 +93,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     list.replaceChildren(fragment);
-
     updateSummary(visibleCards);
   }
 

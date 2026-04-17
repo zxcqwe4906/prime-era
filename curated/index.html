@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>磐毅嚴選｜正式版物件列表</title>
+  <meta name="description" content="磐毅嚴選正式版物件列表。正式上架物件將提供正確且完整的買賣與租屋資訊。">
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+  <link rel="shortcut icon" href="../images/favicon.png">
+  <link rel="stylesheet" href="../styles/site.css">
+</head>
+<body class="selection-page">
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand" href="../index.html" aria-label="回到首頁">
+        <img src="../images/logo.png" alt="PRIME ERA Logo" class="brand-logo">
+        <div class="brand-text">
+          <strong>磐毅建設嚴選不動產</strong>
+          <span>PRIME ERA</span>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="網站導覽">
+        <a href="../index.html">首頁</a>
+        <a href="index.html" class="active">磐毅嚴選</a>
+        <a href="../about/index.html">關於我們</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="selection-shell">
+    <section class="selection-hero">
+      <div class="breadcrumb">
+        <a href="../index.html">首頁</a> / 磐毅嚴選
+      </div>
+      <div class="selection-hero-main">
+        <h1>磐毅嚴選</h1>
+        <div class="gold-line"></div>
+        <p>
+          這裡是正式版物件列表頁，未來上架的買賣與租屋物件將以正確資訊為準，
+          並依需求提供清楚的分類、條件與洽詢入口。
+        </p>
+        <div class="selection-hero-inline">
+          <div class="selection-hero-inline-item">
+            <span class="selection-hero-inline-label">精選物件</span>
+            <strong class="selection-hero-inline-value">0 戶</strong>
+          </div>
+          <div class="selection-hero-inline-item">
+            <span class="selection-hero-inline-label">需求分類</span>
+            <strong class="selection-hero-inline-value">買賣・租屋</strong>
+          </div>
+          <div class="selection-hero-inline-item">
+            <span class="selection-hero-inline-label">涵蓋區域</span>
+            <strong class="selection-hero-inline-value">無</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="selection-panel selection-toolbar" aria-label="物件篩選條件">
+      <div class="selection-primary-filter">
+        <div class="selection-primary-options" role="group" aria-label="物件主分類">
+          <button class="selection-primary-chip active" type="button" data-filter-group="category" data-filter-value="all" aria-pressed="true">
+            <span class="selection-primary-label">全部物件</span>
+            <span class="selection-primary-meta">完整瀏覽磐毅嚴選</span>
+          </button>
+          <button class="selection-primary-chip" type="button" data-filter-group="category" data-filter-value="sale" aria-pressed="false">
+            <span class="selection-primary-label">買賣</span>
+            <span class="selection-primary-meta">精選出售與置產型物件</span>
+          </button>
+          <button class="selection-primary-chip" type="button" data-filter-group="category" data-filter-value="rent" aria-pressed="false">
+            <span class="selection-primary-label">租屋</span>
+            <span class="selection-primary-meta">出租中物件</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="selection-filter-row">
+        <div class="selection-filter-block">
+          <div class="selection-filter-block-label">縣市</div>
+          <div class="selection-filter-group">
+            <button class="selection-filter-chip active" type="button" data-filter-group="region" data-filter-value="all" aria-pressed="true"><strong>全部區域</strong></button>
+            <button class="selection-filter-chip" type="button" data-filter-group="region" data-filter-value="taipei" aria-pressed="false">台北市</button>
+            <button class="selection-filter-chip" type="button" data-filter-group="region" data-filter-value="new-taipei" aria-pressed="false">新北市</button>
+            <button class="selection-filter-chip" type="button" data-filter-group="region" data-filter-value="hsinchu" aria-pressed="false">新竹縣市</button>
+          </div>
+        </div>
+        <div class="selection-filter-block">
+          <div class="selection-filter-block-label">產品條件</div>
+          <div class="selection-filter-group">
+            <button class="selection-filter-chip" type="button" data-filter-group="feature" data-filter-value="price-2000-4000" aria-pressed="false">總價 2,000 - 4,000 萬</button>
+            <button class="selection-filter-chip" type="button" data-filter-group="feature" data-filter-value="rental" aria-pressed="false">收租型產品</button>
+            <button class="selection-filter-chip" type="button" data-filter-group="feature" data-filter-value="transit" aria-pressed="false">近捷運 / 高鐵</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="selection-result-row">
+        <div>
+          <div class="selection-results-title" id="selection-results-title">符合條件的精選物件</div>
+          <div class="selection-results-copy">可依地區、產品類型與價格條件快速篩選合適物件。</div>
+        </div>
+        <div class="selection-result-group">
+          <div class="selection-stat-chip" id="selection-results-count"><strong>共 0 筆</strong></div>
+          <button class="selection-sort-chip active" type="button" data-sort="featured" aria-pressed="true">精選排序</button>
+          <button class="selection-sort-chip" type="button" data-sort="popular" aria-pressed="false">人氣精選</button>
+          <button class="selection-sort-chip" type="button" data-sort="price-asc" aria-pressed="false">價格由低到高</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="selection-layout selection-layout-full">
+      <div class="selection-panel">
+        <div class="selection-panel-header">
+          <div>
+            <h2>精選物件列表</h2>
+            <p>精選整理各生活圈代表性物件，提供清楚的產品資訊與帶看入口。</p>
+          </div>
+        </div>
+
+        <div class="selection-empty is-visible selection-empty-pro" id="selection-empty">
+          <div class="selection-empty-pro-inner">
+            <div class="selection-empty-pro-copy">
+              <strong>目前尚無正式上架物件</strong>
+              <span>未來新增買賣或租屋物件後，將會顯示在這裡，並提供對應的篩選與洽詢資訊。</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="selection-list" id="selection-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      Copyright © 磐毅建設 All Rights Reserved.
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>
